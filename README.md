@@ -1,46 +1,69 @@
-# Refactor a Sudoku Game written in Python Flask
+# Flask Sudoku
 
-Use this simple Sudoku game as a starting point to practice your skills with GitHub Copilot. The goal is to refactor the code to use modern technologies, while also adding new features and improving the overall user experience.
+A Flask Sudoku game with unique-solution puzzle generation, easy/medium/hard
+difficulty levels, hints, a timer, completion validation, a local leaderboard,
+and persisted Dark/Light Mode selection.
 
-## Getting Started
+## Requirements
 
-Follow these instructions to get a copy of the project up and running on your local machine.
+- Python 3.10 or newer
+- A modern web browser such as Chrome, Firefox, or Edge
 
-### Dependencies
+## Setup
 
-```
-- Modern web browser (Chrome, Firefox, Edge, etc.)
-- Python 3
-```
+From the repository root, open a terminal and enter the application directory:
 
-### Installation
-
-1. Fork this repository to your GitHub account. (You can use the "Fork" button on the top right corner of the repository page.)
-
-2. Clone your forked repository to your local machine.
-
-3. Open a terminal window and navigate to the "github-copilot-python/starter" directory.
-
-4. Create a Python virtual environment and activate it (optional but highly recommended).
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
+```powershell
+cd starter
 ```
 
-5. Install required Python packages.
+Create a virtual environment:
 
-```bash
-pip install -r requirements.txt
+```powershell
+python -m venv .venv
 ```
 
-6. Run the Flask app.
+Activate it on Windows PowerShell:
 
-```bash
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+For Windows Command Prompt, use:
+
+```bat
+.venv\Scripts\activate.bat
+```
+
+Install the project requirements:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+## Run the application
+
+Start Flask from the `starter` directory:
+
+```powershell
 python app.py
 ```
 
-7. Open http://127.0.0.1:5000 in your browser.
+Open the application at <http://127.0.0.1:5000> in your browser.
+
+## Run the tests
+
+With the virtual environment activated and the terminal in the `starter`
+directory, run the complete pytest suite:
+
+```powershell
+python -m pytest -q
+```
+
+The tests cover puzzle generation and uniqueness, difficulty routes, solution
+checking, hints, and game-state behavior. Browser features such as the timer,
+theme persistence, and localStorage leaderboard are implemented in the client
+and can be exercised from the running application.
 
 ## Project Instructions
 
